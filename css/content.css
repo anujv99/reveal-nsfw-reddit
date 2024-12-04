@@ -1,0 +1,4 @@
+
+.thumbnail-shadow:has([icon-name="nsfw-fill"]) {
+  display: none !important;
+}

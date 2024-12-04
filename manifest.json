@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Reveal NSFW Reddit",
+  "description": "Reveal NSFW content on Reddit without logging in.",
+  "version": "0.0.1",
+  "action": {
+    "default_icon": "assets/logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.reddit.com/*"],
+      "js": ["src/content.js"],
+      "css": ["css/content.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "permissions": ["tabs", "webNavigation"]
+}
